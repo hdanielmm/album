@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.container {
+  display                 : grid;
+  grid-template-columns   : 20% 20%;
+  grid-template-rows      : 20% 20% 20% 20% 20% 20% 20%;
+  align-items             : center;
+  /* display              : flex; */
+  /* align-items          : center; */
+  justify-content         : center;
+  grid-column-gap         : 30px;
+  grid-row-gap            : 30px;
+}
+
+.mainPhoto {
+  grid-template-rows: 100%;
+  grid-area         : 1/1/3/3;
+  border            : 1px solid grey;
+  border-radius     : 7px;
+  background-image  : radial-gradient(#ffffff, #e5e5e2);
+  box-shadow        : 5px 5px 10px #54544a;
+  display           : flex;
+  justify-content   : flex-end;
+  align-items       : center;
+  height            : 100%;
+  position          : relative;
+}
+
+.photo {
+  border            : 1px solid grey;
+  border-radius     : 7px;
+  background-image  : radial-gradient(#ffffff, #e5e5e2);
+  box-shadow        : 5px 5px 10px #54544a;
+  height            : 150px;
+  display           : flex;
+  position          : relative;
+}
+
+.name {
+  margin    : 0 auto;
+  display   : flex;
+  align-self: center
+}
+
+.far {
+  position        : absolute;
+  right           : 15px;
+  bottom          : 15px;
+  color           : red;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows   : 20% 20% 20% 20% 20%;
+  }
+}
+
+@media (min-width: 991px) {
+  .container {
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows   : 20% 20% 20% 20%;
+  }
+}
